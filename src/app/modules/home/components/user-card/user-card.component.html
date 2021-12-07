@@ -1,12 +1,13 @@
 <div class="card">
-    <div class="userPhoto">
-        <img src="assets/avatar4.png" alt="Avatar">
+  <div class="userPhoto">
+    <!-- <img src="assets/avatar4.png" alt="Avatar"> -->
+    <img src={{user?.picture?.large}} alt="avatar">
+  </div>
+  <div class="container">
+    <div class="column">
+      <span class="userInfo">First / Last Name: {{user?.name?.first}} {{user?.name?.last}} </span>
+      <span class="userInfo">Age: {{ user?.dob?.age }}</span>
+      <span class="userInfo">Email: {{user?.email}}</span>
+      <span class="userInfo">Phone: {{user?.phone}}</span>
     </div>
-    <div class="container">
-        <div class="column">
-            <span class="userInfo">First / Last Name: </span>
-            <span class="userInfo">Age: </span>
-            <span class="userInfo">Email: </span>
-            <span class="userInfo">Phone: </span>
-        </div>
-    </div>
+  </div>
