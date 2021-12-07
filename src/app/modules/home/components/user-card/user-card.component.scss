@@ -1,42 +1,33 @@
 .card {
-    box-sizing: border-box ;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 450px;
-    margin: auto;
-    text-align: center;
-    display: flex;
+  position: absolute;
+  width: 450px;
+  height: 225px;
+  padding: 25px;
+  padding-top: 0;
+  padding-bottom: 0;
+  left: 50%;
+  top: 67.5px;
+  margin-left: -250px;
+  background: #E9E2D0;
+  box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
+  z-index: 5;
 }
-.avatar{
-    
-    justify-content: center;
-    background-color: #f2f2f2;
-}
-.row {
-    display: flex;
-    margin: 0 -16px;
-  }
-  
-  .col {
-    flex: 50%;
-    padding: 0 16px;
-  }
-  
-  .container {
-    background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-  }
-  
-  input[type=text] {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    text-overflow: ellipsis;
-  }
-  
-  
-  
+
+.card img {
+  width: 150px;
+  float: left;
+  border-radius: 5px;
+  margin-right: 20px;
  
+}
+.userInfo {
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  color: #555;
+  font-size: 16px;
+  display: flex;
+  padding: 10px 0px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
