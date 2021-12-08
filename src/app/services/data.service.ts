@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { UsersDTO } from '../interfaces/user.interface';
-import { Observable } from 'rxjs';
+import { User, UsersDTO } from '../interfaces/user.interface';
+import { map, Observable } from 'rxjs';
 
 
 
@@ -15,7 +15,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  public getData(): Observable<UsersDTO> {
-    return this.http.get<UsersDTO>(this.URL);
+  public getData(): Observable<User[]> {
+    return this.http.get<UsersDTO>(this.URL).pipe(map(data => data.results));
   }
 }

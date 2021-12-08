@@ -5,15 +5,23 @@
   padding: 25px;
   padding-top: 0;
   padding-bottom: 0;
+  margin-bottom: 20px;
   left: 50%;
   top: 67.5px;
   margin-left: -250px;
   background: #E9E2D0;
   box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
-  z-index: 5;
+  //z-index: 5;
 }
-
+.btn{
+  display: flex;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border-color:#E9E2D0;
+  margin-left: 475px;
+}
 .card img {
+  padding: 25px 0px 0px;
   width: 150px;
   float: left;
   border-radius: 5px;
@@ -26,7 +34,7 @@
   color: #555;
   font-size: 16px;
   display: flex;
-  padding: 10px 0px 20px;
+  padding: 10px 0px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

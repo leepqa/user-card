@@ -4,6 +4,7 @@
     <img src={{user?.picture?.large}} alt="avatar">
   </div>
   <div class="container">
+    <button class="btn" (click)="deleteUser()">X</button>
     <div class="column">
       <span class="userInfo">First / Last Name: {{user?.name?.first}} {{user?.name?.last}} </span>
       <span class="userInfo">Age: {{ user?.dob?.age }}</span>
