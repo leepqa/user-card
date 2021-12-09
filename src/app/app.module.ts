@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.service';
 import { DescriptionModule } from './modules/home/description/description.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
