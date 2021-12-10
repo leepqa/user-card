@@ -1,4 +1,4 @@
-.card {
+.cardDescription {
   position: relative;
   width: 575px;
   height: auto;
@@ -14,7 +14,7 @@
   z-index: 5;
 }
 
-.card img {
+.cardDescription img {
   padding: 25px 0px 0px;
   width: 150px;
   float: left;
@@ -32,4 +32,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.btnBack{
+border-radius: 5%;
+border-width: 2px;
+float: right;
+margin: 10px;
 }

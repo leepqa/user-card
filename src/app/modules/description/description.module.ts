@@ -1,6 +1,8 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DescriptionComponent } from './description.component';
+
 
 
 
@@ -14,6 +16,12 @@ import { DescriptionComponent } from './description.component';
   ],
   imports: [
     CommonModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: DescriptionComponent
+      }
+    ])
 
   ]
 

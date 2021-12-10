@@ -1,1 +1,2 @@
-<app-user-card *ngFor="let item of users" [user]="item" (deleteEvent)="deleteUser($event)"></app-user-card>
+<app-user-card *ngFor="let item of users" [user]="item" (deleteEvent)="deleteUser($event)"
+  (openDescription)="openDescription($event)"></app-user-card>

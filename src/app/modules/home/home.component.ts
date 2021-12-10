@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user.interface';
 import { DataService } from 'src/app/services/data.service';
 
@@ -10,7 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 export class HomeComponent implements OnInit {
   public users: User[] = [];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
     this.dataService.getData()
@@ -18,8 +19,11 @@ export class HomeComponent implements OnInit {
   }
 
   public deleteUser(uuid: string): void {
-    console.log(uuid);
     this.users = this.users.filter(item => item.login.uuid !== uuid)
+  }
+
+  public openDescription(uuid: string): void {
+    this.router.navigate(['description', uuid]);
   }
 }
 

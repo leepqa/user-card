@@ -10,6 +10,7 @@ export class UserCardComponent implements OnInit {
 
   @Input() public user: User | undefined;
   @Output() public deleteEvent = new EventEmitter<string>();
+  @Output() public openDescription = new EventEmitter<string>();
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class UserCardComponent implements OnInit {
 
   public deleteUser(): void {
     this.deleteEvent.emit(this.user?.login.uuid);
+  }
+
+  public openUserDescription(): void {
+    this.openDescription.emit(this.user?.login.uuid)
   }
 
 }
