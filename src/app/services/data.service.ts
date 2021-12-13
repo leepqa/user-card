@@ -30,7 +30,7 @@ export class DataService {
   }
 
   public getUserByUuid(uuid: string): Observable<User> {
-    const user = this.users?.find(users => users.login.uuid = uuid) as User;
+    const user = this.users?.find(users => users.login.uuid === uuid) as User;
     return of(user);
   }
 }

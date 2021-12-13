@@ -1,18 +1,18 @@
-<div class="cardDescription">
+<div class="cardDescription" *ngIf="(user$ | async) as user">
   <div class="userPhoto">
-    <img src="assets/avatar4.png" alt="Avatar">
+    <img src={{user?.picture?.large}} alt="avatar">
   </div>
   <div class="container">
     <div class="column">
-      <span class="userDescription">First / Last Name: </span>
-      <span class="userDescription">Age: </span>
-      <span class="userDescription">Email: </span>
-      <span class="userDescription">Phone: </span>
-      <span class="userDescription">Id: </span>
-      <span class="userDescription">Gender: </span>
-      <span class="userDescription">Location: </span>
-      <span class="userDescription">Nat: </span>
-      <span class="userDescription">Registered: </span>
+      <span class="userDescription">First / Last Name: {{user?.name?.first}} {{user?.name?.last}}</span>
+      <span class="userDescription">Age: {{ user?.dob?.age}}</span>
+      <span class="userDescription">Email: {{user?.email}}</span>
+      <span class="userDescription">Phone: {{user?.phone}}</span>
+      <span class="userDescription">Id: {{user?.login?.uuid}}</span>
+      <span class="userDescription">Gender: {{user?.gender}}</span>
+      <span class="userDescription">Location: {{user?.location?.city}}</span>
+      <span class="userDescription">Nat: {{user?.nat}}</span>
+      <span class="userDescription">Registered: {{user?.registered?.date}}</span>
     </div>
   </div>
   <div class="button">
