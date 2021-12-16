@@ -7,11 +7,14 @@
   padding-bottom: 0;
   margin-bottom: 20px;
   left: 50%;
-  top: 67.5px;
   margin-left: -250px;
   background: #E9E2D0;
   box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
-  //z-index: 5;
+  cursor: pointer;
+  z-index: 1000;
+}
+.card:hover {
+  transform: translateY(-1px);
 }
 .btn{
   display: flex;
@@ -30,7 +33,7 @@
 }
 .userInfo {
   position: relative;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #555;
   font-size: 16px;
   display: flex;
@@ -39,3 +42,5 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+

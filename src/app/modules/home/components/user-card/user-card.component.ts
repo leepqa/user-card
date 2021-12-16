@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { User } from 'src/app/interfaces/user.interface';
 
+
 @Component({
   selector: 'app-user-card',
   templateUrl: './user-card.component.html',
@@ -15,6 +16,7 @@ export class UserCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   public deleteUser(): void {
@@ -24,5 +26,4 @@ export class UserCardComponent implements OnInit {
   public openUserDescription(): void {
     this.openDescription.emit(this.user?.login.uuid)
   }
-
 }

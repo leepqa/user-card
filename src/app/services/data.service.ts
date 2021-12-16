@@ -12,7 +12,7 @@ import { map, Observable, of, tap, find } from 'rxjs';
 
 export class DataService {
 
-  private readonly URL = "https://randomuser.me/api?results=10";
+  private readonly URL = "https://randomuser.me/api?results=3";
   private users: User[] | undefined;
 
   constructor(private http: HttpClient) { }

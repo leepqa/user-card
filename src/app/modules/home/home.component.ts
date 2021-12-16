@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user.interface';
 import { DataService } from 'src/app/services/data.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,7 +12,8 @@ import { DataService } from 'src/app/services/data.service';
 export class HomeComponent implements OnInit {
   public users: User[] = [];
 
-  constructor(private dataService: DataService, private router: Router) { }
+
+  constructor(private dataService: DataService, private router: Router,) { }
 
   ngOnInit(): void {
     this.dataService.getData()
@@ -25,6 +27,7 @@ export class HomeComponent implements OnInit {
   public openDescription(uuid: string): void {
     this.router.navigate(['description', uuid]);
   }
+
 }
 
 

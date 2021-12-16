@@ -4,6 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.service';
+import { ModalService } from './services/modal.service';
+
+
 
 
 @NgModule({
@@ -13,9 +16,10 @@ import { DataService } from './services/data.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  providers: [DataService],
+  providers: [DataService,
+    ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

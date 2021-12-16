@@ -1,0 +1,17 @@
+<button class="addUser" (click)="open()">Add New User</button>
+
+<div class="modal-body" *ngIf="display$ | async">
+  <div class="text-field">
+    <label class="text-field__label" for="firstName">First Name</label>
+    <input class="text-field__input" type="text" name="firstName" id="firstName" placeholder="First Name">
+  </div>
+  <div class="text-field">
+    <label class="text-field__label" for="lastName">Last Name</label>
+    <input class="text-field__input" type="text" name="lastName" id="lastName" placeholder="Last Name">
+  </div>
+  <div class="text-field">
+    <label class="text-field__label" for="email">Email</label>
+    <input class="text-field__input" type="text" name="email" id="email" placeholder="Email">
+  </div>
+  <button class="add" (click)="close()">Add</button>
+</div>

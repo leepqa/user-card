@@ -24,7 +24,7 @@
 }
 .userDescription {
   position: relative;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #555;
   font-size: 16px;
   display: flex;
@@ -34,9 +34,30 @@
   text-overflow: ellipsis;
 }
 
+
 .btnBack{
-border-radius: 5%;
-border-width: 2px;
 float: right;
 margin: 10px;
+align-items: center;
+background-color: #E9E2D0;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: .25rem;
+box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+color: rgba(0, 0, 0, 0.85);
+cursor: pointer;
+display: flex;
+position: relative;
+font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 16px;
+font-weight: 400;
+justify-content: center;
+line-height: 1.25;
+min-height: 3rem;
+padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+text-decoration: none;
+transition: all 250ms;
+}
+.btnBack:hover {
+  transform: translateY(-1px);
 }
