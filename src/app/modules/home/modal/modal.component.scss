@@ -21,25 +21,26 @@
   transition: all 250ms;
   width: auto;
   margin-left: 350px;
+
 }
 
 .modal-body{
   position: relative;
-  margin-left: 35%;
-  z-index: 0;
+  margin-left: 29%;
   background-color: #F0F0F1;
   justify-content: center;
   text-align: center;
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 31%;
-  height: auto;
+  width: 777px;
+  height: 433px;
   font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   font-weight: 500;
   box-sizing: border-box;
-  line-height: 2;
-  z-index: 2000;
+  //line-height: 2;
+  z-index: 1000;
+  padding-top: 50px;
 }
 
 .add{
@@ -63,21 +64,22 @@
   position: relative;
   text-decoration: none;
   transition: all 250ms;
-  width: auto;
+  width: 200px;
 }
-.text-field {
+.modal {
   margin-bottom: 1rem;
   box-sizing: border-box;
+padding: 15px;
 }
 
-.text-field__label {
-  display: block;
-  margin-bottom: 0.25rem;
-  box-sizing: border-box;
-  text-align: left;
-}
+// .text-field__label {
+//   display: block;
+//   margin-bottom: 0.25rem;
+//   box-sizing: border-box;
+//   text-align: left;
+// }
 
-.text-field__input {
+.modal-form{
   display: block;
   width: 100%;
   height: calc(2.25rem + 2px);
@@ -91,6 +93,7 @@
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   box-sizing: border-box;
+  margin: 10px;
 }
 
 .addUser:hover,
@@ -111,7 +114,8 @@
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
-.text-field__input::placeholder {
+.modal-form input::placeholder {
   color: #212529;
   opacity: 0.4;
 }
+

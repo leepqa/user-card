@@ -5,7 +5,6 @@ import { map, Observable, of, tap, find } from 'rxjs';
 
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +14,68 @@ export class DataService {
   private readonly URL = "https://randomuser.me/api?results=3";
   private users: User[] | undefined;
 
+
   constructor(private http: HttpClient) { }
+
+  public saveUser() {
+    const user: User = {
+      cell: "",
+      dob: {
+        age: 22,
+        date: ""
+      },
+      email: "",
+      gender: "",
+      id: {
+        name: "",
+        value: ""
+      },
+      location: {
+        city: "",
+        coordinates: {
+          latitude: "",
+          longtitude: ""
+        },
+        country: "",
+        postcode: 123586,
+        state: "",
+        street: {
+          number: 78966,
+          name: ""
+        },
+        timezone: {
+          offset: "",
+          descriptoin: ""
+        }
+      },
+      login: {
+        md5: "",
+        password: "",
+        salt: "",
+        sha1: "",
+        sha256: "",
+        username: "",
+        uuid: ""
+      },
+      name: {
+        first: "",
+        last: "",
+        title: ""
+      },
+      nat: "",
+      phone: "",
+      picture: {
+        large: "",
+        medium: "",
+        thumbnail: ""
+      },
+      registered: {
+        age: 21,
+        date: ""
+      }
+    }
+    //this.users = [...this.users, user];
+  }
 
   public getData(): Observable<User[]> {
 

@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { UserCardComponent } from "./components/user-card/user-card.component";
 import { HomeComponent } from "./home.component";
 import { ModalCompanent } from './modal/modal.components';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,6 +19,8 @@ import { ModalCompanent } from './modal/modal.components';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forChild([
       {
         path: '',

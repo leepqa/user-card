@@ -1,17 +1,52 @@
 <button class="addUser" (click)="open()">Add New User</button>
 
-<div class="modal-body" *ngIf="display$ | async">
-  <div class="text-field">
-    <label class="text-field__label" for="firstName">First Name</label>
-    <input class="text-field__input" type="text" name="firstName" id="firstName" placeholder="First Name">
+
+<form #usersForm="ngForm" (ngSubmit)="saveUser(usersForm.value)">
+
+  <div class="modal-body" *ngIf="display$ | async">
+    <div class="modal">
+      <input class="modal-form" type="text" ngModel name="first" placeholder="First Name">
+      <input class="modal-form" type="text" ngModel name="last" placeholder="Last Name">
+      <input class="modal-form" type="email" ngModel name="email" placeholder="Email">
+    </div>
+    <button type="submit" class="add">add user</button>
   </div>
-  <div class="text-field">
-    <label class="text-field__label" for="lastName">Last Name</label>
-    <input class="text-field__input" type="text" name="lastName" id="lastName" placeholder="Last Name">
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<form [formGroup]="userProfile" (ngSubmit)="onSubmit()">
+
+  <div class="modal-body" *ngIf="display$ | async">
+    <div class="modal">
+      <input class="modal-form" type="text" formControlName="first" placeholder="First Name">
+      <input class="modal-form" type="text" formControlName="last" placeholder="Last Name">
+      <input class="modal-form" type="email" formControlName="email" placeholder="Email">
+    </div>
+    <button type="submit" class="add">Add User</button>
+
   </div>
-  <div class="text-field">
-    <label class="text-field__label" for="email">Email</label>
-    <input class="text-field__input" type="text" name="email" id="email" placeholder="Email">
-  </div>
-  <button class="add" (click)="close()">Add</button>
-</div>
+
+
+</form> -->

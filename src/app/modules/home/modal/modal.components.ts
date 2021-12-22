@@ -5,6 +5,7 @@ import { ModalStateType } from 'src/app/constants/modal-state';
 
 
 
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -16,19 +17,26 @@ export class ModalCompanent implements OnInit {
 
   constructor(private modalService: ModalService) { }
 
+
   ngOnInit(): void {
+
     this.watch();
 
   }
+
   public watch() {
     this.display$ = this.modalService.watch().pipe(map(res => res === ModalStateType.OPEN));
   }
   public close() {
     this.modalService.close();
-
   }
   public open() {
     this.modalService.open();
+  }
+  public saveUser(value: any) {
+
+    console.log(value);
+
   }
 
 }
