@@ -38,7 +38,6 @@
   font-size: 14px;
   font-weight: 500;
   box-sizing: border-box;
-  //line-height: 2;
   z-index: 1000;
   padding-top: 50px;
 }
@@ -69,15 +68,8 @@
 .modal {
   margin-bottom: 1rem;
   box-sizing: border-box;
-padding: 15px;
+  padding: 15px;
 }
-
-// .text-field__label {
-//   display: block;
-//   margin-bottom: 0.25rem;
-//   box-sizing: border-box;
-//   text-align: left;
-// }
 
 .modal-form{
   display: block;
