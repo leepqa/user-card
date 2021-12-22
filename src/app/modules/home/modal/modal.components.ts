@@ -21,7 +21,6 @@ export class ModalCompanent implements OnInit {
   ngOnInit(): void {
 
     this.watch();
-
   }
 
   public watch() {
@@ -34,9 +33,8 @@ export class ModalCompanent implements OnInit {
     this.modalService.open();
   }
   public saveUser(value: any) {
-
+    this.close();
     console.log(value);
-
   }
 
 }

@@ -12,12 +12,12 @@ import { map, Observable, of, tap, find } from 'rxjs';
 export class DataService {
 
   private readonly URL = "https://randomuser.me/api?results=3";
-  private users: User[] | undefined;
+  private users: User[] = [];
 
 
   constructor(private http: HttpClient) { }
 
-  public saveUser() {
+  public saveUser(): void {
     const user: User = {
       cell: "",
       dob: {
@@ -74,12 +74,12 @@ export class DataService {
         date: ""
       }
     }
-    //this.users = [...this.users, user];
+    this.users = [user, ...this.users];
   }
 
   public getData(): Observable<User[]> {
 
-    if (this.users) {
+    if (this.users.length) {
       return of(this.users);
     }
 
